@@ -11,7 +11,9 @@ public class Main {
             int roll = d10.roll();
             System.out.println("The dice rolls " + roll);
             System.out.println("Where do you want to place the number? (r,c)");
-            System.out.println("If you're playing with someone else, then add a 3rd comma to input the dice roll they got");
+            if(timesPlaced == 0) {
+                System.out.println("If you're playing with someone else, then add a 3rd comma to input the dice roll they got");
+            }
             String input2 = scanner.nextLine();
             if(input2.equals("fill")){
                 board.fillBoard();
