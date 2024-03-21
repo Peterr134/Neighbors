@@ -83,9 +83,10 @@ public class Board {
     }
 
     public void fillBoard(){
+        Dice d10 = new Dice(10);
         for(int r = 0; r < 5; r++){
             for(int c = 0; c < 5; c++){
-                board[r][c] = 1;
+                board[r][c] = d10.roll();
             }
         }
     }
